@@ -1,0 +1,110 @@
+/* sports.css — Sports section specific styles */
+
+.sports-hero {
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1208 60%, #2a1a08 100%);
+  color: var(--paper);
+  padding: 2rem 0;
+  border-bottom: 3px solid var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.sports-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 40px,
+    rgba(200,25,42,.04) 40px,
+    rgba(200,25,42,.04) 41px
+  );
+}
+
+.sports-hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+}
+
+.sports-hero h1 {
+  font-family: var(--font-banner);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: .06em;
+  line-height: 1;
+  color: var(--paper);
+}
+
+.sports-hero .page-desc {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: .95rem;
+  color: #a09282;
+  margin-top: .4rem;
+}
+
+.wbc-badge {
+  text-align: center;
+  background: var(--accent);
+  padding: 1rem 1.5rem;
+  min-width: 120px;
+}
+
+.wbc-badge-title {
+  font-family: var(--font-banner);
+  font-size: 1.4rem;
+  letter-spacing: .08em;
+  color: #fff;
+  line-height: 1;
+}
+
+.wbc-badge-sub {
+  font-family: var(--font-label);
+  font-size: .65rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.75);
+  margin: .2rem 0;
+}
+
+.wbc-badge-flag {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+/* Stats row */
+.sports-stats-row {
+  display: flex;
+  gap: 0;
+  margin: 1.2rem 0;
+  border: 1px solid var(--light-rule);
+}
+
+.sport-stat {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  border-right: 1px solid var(--light-rule);
+}
+
+.sport-stat:last-child { border-right: none; }
+
+.sport-stat-num {
+  font-family: var(--font-banner);
+  font-size: 2.4rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.sport-stat-label {
+  font-family: var(--font-label);
+  font-size: .68rem;
+  color: var(--muted);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin-top: .3rem;
+}
